@@ -2,8 +2,31 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+
+    <!-- SEO META TAGS -->
+    <title>Free 200KB PDF Compressor | Compress PDF & Images Online | V.K Tools</title>
+
+    <meta name="description" content="Free online 200KB PDF compressor. Instantly reduce PDF and image file sizes to under 200KB with high quality. Fast, secure, no ads, no signup. Best for exams, job forms, online submissions.">
+
+    <meta name="keywords" content="200kb pdf compressor, pdf size reducer, compress pdf online, reduce pdf size, image compressor, jpg compressor, compress pdf to 200kb, online pdf tool, shrink pdf size, free pdf compressor">
+
+    <meta name="robots" content="index, follow">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>V.K | Pro Compressor</title>
+
+    <link rel="canonical" href="https://devil9594.github.io/vk-compressor/">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:title" content="Free 200KB PDF Compressor | Fast Online File Compressor">
+    <meta property="og:description" content="Compress PDF and images to 200KB instantly. High quality, secure, and mobile-friendly.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://devil9594.github.io/vk-compressor/">
+    <meta property="og:image" content="https://devil9594.github.io/vk-compressor/preview.png">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Free 200KB PDF Compressor | Online PDF & Image Size Reducer">
+    <meta name="twitter:description" content="Compress PDF or image below 200KB for free. High quality, secure, no ads.">
+    <meta name="twitter:image" content="https://devil9594.github.io/vk-compressor/preview.png">
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -27,6 +50,7 @@
             background: radial-gradient(circle at top left, #1e1b4b, #312e81, #0f172a);
             background-size: 200% 200%;
             animation: gradientBG 15s ease infinite;
+            color: white;
         }
 
         @keyframes gradientBG {
@@ -35,42 +59,22 @@
             100% { background-position: 0% 50%; }
         }
 
-        /* Glassmorphism Card */
         .glass-panel {
             background: rgba(255, 255, 255, 0.05);
             backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
             border: 1px solid rgba(255, 255, 255, 0.1);
             box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
         }
 
-        /* V.K Logo Styling */
-        .vk-logo-container {
-            position: relative;
-            display: inline-block;
-        }
         .vk-logo {
-            font-size: 2.5rem;
+            font-size: 2.7rem;
             font-weight: 900;
             background: linear-gradient(135deg, #818cf8, #c084fc);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            letter-spacing: -2px;
-            position: relative;
-            z-index: 10;
-        }
-        .vk-underline {
-            content: '';
-            position: absolute;
-            bottom: 5px;
-            left: 0;
-            width: 100%;
-            height: 4px;
-            background: linear-gradient(90deg, #818cf8, transparent);
-            border-radius: 2px;
+            letter-spacing: -1px;
         }
 
-        /* Drop Zone */
         .drop-zone {
             border: 2px dashed rgba(255, 255, 255, 0.2);
             transition: all 0.3s ease;
@@ -79,16 +83,14 @@
         .drop-zone:hover, .drop-zone.dragover {
             border-color: #818cf8;
             background: rgba(129, 140, 248, 0.1);
-            transform: scale(1.01);
+            transform: scale(1.02);
         }
 
-        /* Progress Bar */
         .progress-container {
-            width: 100%;
             background-color: rgba(255, 255, 255, 0.1);
             border-radius: 999px;
-            overflow: hidden;
             height: 6px;
+            overflow: hidden;
         }
         .progress-bar {
             height: 100%;
@@ -98,101 +100,78 @@
         }
 
         .btn-primary {
-            background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
-            transition: all 0.3s;
-            position: relative;
-            overflow: hidden;
+            background: linear-gradient(135deg, #4f46e5, #7c3aed);
+            transition: all 0.3s ease;
         }
         .btn-primary:hover {
             opacity: 0.9;
-            transform: translateY(-1px);
-            box-shadow: 0 10px 20px -10px rgba(124, 58, 237, 0.5);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px -8px rgba(124, 58, 237, 0.5);
         }
     </style>
 </head>
 
-<body class="min-h-screen flex items-center justify-center p-4 text-white">
+<body class="min-h-screen flex items-center justify-center p-4">
 
-<div class="glass-panel w-full max-w-lg rounded-3xl p-8 relative overflow-hidden">
-    
-    <!-- Decorative Glow -->
-    <div class="absolute -top-20 -right-20 w-64 h-64 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
-    <div class="absolute -bottom-20 -left-20 w-64 h-64 bg-indigo-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
+<div class="glass-panel w-full max-w-lg rounded-3xl p-8 relative">
 
-    <!-- Header -->
-    <div class="text-center mb-8 relative z-10">
-        <div class="vk-logo-container mb-1">
-            <span class="vk-logo">V.K</span>
-            <div class="vk-underline"></div>
-        </div>
-        <p class="text-gray-400 text-sm font-medium tracking-widest uppercase mt-2">Professional Compression Engine</p>
+    <div class="text-center mb-8">
+        <span class="vk-logo">V.K</span>
+        <p class="text-gray-400 text-sm tracking-wide mt-1">Professional Compression Engine</p>
     </div>
 
-    <!-- 1. Upload Section -->
-    <div id="uploadSection" class="relative z-10">
+    <!-- Upload -->
+    <div id="uploadSection">
         <label for="fileInput" id="dropZone"
-               class="drop-zone block w-full rounded-2xl p-12 text-center cursor-pointer group">
-            <div class="mb-4 transform group-hover:-translate-y-2 transition duration-300">
-                <svg class="w-16 h-16 mx-auto text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/>
-                </svg>
-            </div>
-            <span class="text-xl font-medium text-white group-hover:text-indigo-300 transition">Upload File</span>
-            <p class="text-xs text-gray-500 mt-2 font-medium">SUPPORTING PDF, JPG, PNG</p>
+               class="drop-zone block w-full rounded-2xl p-10 text-center cursor-pointer">
+            <svg class="w-16 h-16 mx-auto text-indigo-300 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                      d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/>
+            </svg>
+            <span class="text-xl">Upload File</span>
+            <p class="text-xs text-gray-400 mt-1">PDF, JPG, PNG</p>
         </label>
-        <input id="fileInput" type="file" accept=".pdf, application/pdf, image/*" class="hidden">
+        <input id="fileInput" type="file" accept=".pdf, image/*" class="hidden">
     </div>
 
-    <!-- 2. Processing Section -->
-    <div id="processingSection" class="hidden relative z-10 py-8">
-        <div class="text-center mb-6">
-            <div class="inline-block relative">
-                <div class="w-16 h-16 border-4 border-indigo-500/30 border-t-indigo-500 rounded-full animate-spin"></div>
-            </div>
-            <h3 class="text-xl font-bold mt-4 text-white">Optimizing</h3>
-            <p id="statusText" class="text-sm text-gray-400 mt-1">Analyzing density...</p>
-        </div>
-        <div class="progress-container">
+    <!-- Processing -->
+    <div id="processingSection" class="hidden py-8 text-center">
+        <div class="w-16 h-16 border-4 border-indigo-500/30 border-t-indigo-500 rounded-full animate-spin mx-auto"></div>
+        <h3 class="text-xl font-bold mt-4">Optimizing…</h3>
+        <p id="statusText" class="text-gray-400 text-sm">Analyzing...</p>
+
+        <div class="progress-container mt-4">
             <div id="progressBar" class="progress-bar"></div>
         </div>
     </div>
 
-    <!-- 3. Result Section -->
-    <div id="resultSection" class="hidden relative z-10">
-        <div class="bg-black/20 rounded-2xl p-6 mb-6 border border-white/5">
-            <div class="flex items-center justify-between mb-4">
-                <div class="text-left">
-                    <p class="text-xs text-gray-500 uppercase tracking-wide mb-1">Original</p>
-                    <p id="originalSize" class="text-lg font-bold text-white">0 MB</p>
+    <!-- Result -->
+    <div id="resultSection" class="hidden">
+        <div class="bg-white/5 p-6 rounded-xl border border-white/10 mb-4">
+            <div class="flex justify-between">
+                <div>
+                    <p class="text-gray-400 text-xs">Original</p>
+                    <p id="originalSize" class="text-lg font-bold">0 MB</p>
                 </div>
-                <div class="text-indigo-400">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg>
-                </div>
-                <div class="text-right">
-                    <p class="text-xs text-indigo-400 uppercase tracking-wide mb-1">Optimized</p>
+
+                <div class="text-indigo-300">→</div>
+
+                <div>
+                    <p class="text-indigo-300 text-xs">Optimized</p>
                     <p id="finalSize" class="text-lg font-bold text-green-400">0 KB</p>
                 </div>
             </div>
-            <div class="h-px w-full bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
-            <p class="text-center text-xs text-gray-500 mt-3">High Quality • Smart Compression</p>
         </div>
 
         <button id="downloadBtn"
-                class="w-full btn-primary text-white font-bold py-4 rounded-xl shadow-lg flex items-center justify-center gap-2">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"></path></svg>
-            Download Optimized File
-        </button>
+                class="w-full btn-primary py-4 rounded-xl font-bold">Download File</button>
 
         <button onclick="location.reload()"
-                class="w-full mt-4 py-2 text-sm text-gray-400 hover:text-white transition">
-            Process Another File
-        </button>
+                class="w-full mt-3 text-gray-400 text-sm">Compress Another</button>
     </div>
-
 </div>
 
 <script>
-    // --- DOM Elements ---
     const fileInput = document.getElementById("fileInput");
     const dropZone = document.getElementById("dropZone");
     const uploadSection = document.getElementById("uploadSection");
@@ -203,16 +182,17 @@
     const downloadBtn = document.getElementById("downloadBtn");
 
     let finalBlob = null;
-    let finalFileName = "optimized_file";
+    let finalFileName = "optimized";
 
-    // --- UI Logic ---
     fileInput.addEventListener("change", e => handleFile(e.target.files[0]));
 
     dropZone.addEventListener("dragover", e => {
         e.preventDefault();
         dropZone.classList.add("dragover");
     });
+
     dropZone.addEventListener("dragleave", () => dropZone.classList.remove("dragover"));
+
     dropZone.addEventListener("drop", e => {
         e.preventDefault();
         dropZone.classList.remove("dragover");
@@ -221,153 +201,104 @@
 
     downloadBtn.addEventListener("click", () => {
         if (!finalBlob) return;
-        const blobUrl = URL.createObjectURL(finalBlob);
+        const url = URL.createObjectURL(finalBlob);
         const a = document.createElement("a");
-        a.style.display = "none";
-        a.href = blobUrl;
-        
-        // Smart Extension Handling
-        let extension = "";
-        if (finalFileName.endsWith(".pdf")) extension = ""; // already has it
-        else if (finalFileName.includes(".")) extension = "";
-        else extension = ".bin";
-
-        a.download = finalFileName + extension;
+        a.href = url;
+        a.download = finalFileName;
         document.body.appendChild(a);
         a.click();
-        document.body.removeChild(a);
-        setTimeout(() => URL.revokeObjectURL(blobUrl), 2000);
+        a.remove();
+        setTimeout(() => URL.revokeObjectURL(url), 2000);
     });
 
-    // --- Main Handler ---
     function handleFile(file) {
         if (!file) return;
 
         uploadSection.classList.add("hidden");
         processingSection.classList.remove("hidden");
-        document.getElementById("originalSize").innerText = formatBytes(file.size);
-        
-        // Reset Progress
-        progressBar.style.width = "5%";
+        document.getElementById("originalSize").textContent = formatBytes(file.size);
 
-        const lowerName = file.name.toLowerCase();
-        // Generate new filename: name_optimized.ext
-        const namePart = file.name.substring(0, file.name.lastIndexOf('.')) || file.name;
-        
-        if (file.type === "application/pdf" || lowerName.endsWith(".pdf")) {
-            finalFileName = `${namePart}_optimized.pdf`;
+        const ext = file.name.split(".").pop().toLowerCase();
+        const base = file.name.replace(/\.[^/.]+$/, "");
+
+        if (ext === "pdf") {
+            finalFileName = base + "_optimized.pdf";
             processPdf(file);
-        } else if (file.type.startsWith("image/") || /\.(jpg|jpeg|png)$/.test(lowerName)) {
-            finalFileName = `${namePart}_optimized.jpg`;
-            processImage(file);
         } else {
-            alert("Please upload a supported file (PDF, JPG, PNG)");
-            location.reload();
+            finalFileName = base + "_optimized.jpg";
+            processImage(file);
         }
     }
 
-    // --- PDF Engine (High Quality Balanced) ---
     async function processPdf(file) {
-        try {
-            statusText.innerText = "Parsing Document Structure...";
-            progressBar.style.width = "20%";
-            
-            const arrayBuffer = await file.arrayBuffer();
-            const pdfDoc = await pdfjsLib.getDocument(arrayBuffer).promise;
-            const { jsPDF } = window.jspdf;
-            const newPdf = new jsPDF();
-            
-            const totalPages = pdfDoc.numPages;
+        statusText.textContent = "Rendering pages…";
+        progressBar.style.width = "15%";
 
-            for (let i = 1; i <= totalPages; i++) {
-                // Update Progress
-                const percent = 20 + ((i / totalPages) * 70);
-                progressBar.style.width = `${percent}%`;
-                statusText.innerText = `Rendering High-Res Page ${i}/${totalPages}`;
+        const arrayBuffer = await file.arrayBuffer();
+        const pdfDoc = await pdfjsLib.getDocument(arrayBuffer).promise;
 
-                const page = await pdfDoc.getPage(i);
-                
-                // QUALITY SETTING: 
-                // We scale to approx 1.5x standard view (approx 800-900px width)
-                // This keeps text sharp while keeping size low.
-                const viewport = page.getViewport({ scale: 1.5 }); 
-                
-                const canvas = document.createElement("canvas");
-                canvas.width = viewport.width;
-                canvas.height = viewport.height;
-                const ctx = canvas.getContext("2d");
+        const { jsPDF } = window.jspdf;
+        const newPdf = new jsPDF();
 
-                // Render
-                await page.render({ canvasContext: ctx, viewport: viewport }).promise;
+        for (let i = 1; i <= pdfDoc.numPages; i++) {
+            const percent = (i / pdfDoc.numPages) * 80 + 15;
+            progressBar.style.width = percent + "%";
 
-                // COMPRESSION SETTING:
-                // Quality 0.45 is the sweet spot for text readability vs size
-                const imgData = canvas.toDataURL("image/jpeg", 0.45);
+            const page = await pdfDoc.getPage(i);
+            const viewport = page.getViewport({ scale: 1.4 });
 
-                if (i > 1) newPdf.addPage();
-                
-                const pdfW = newPdf.internal.pageSize.getWidth();
-                const pdfH = (viewport.height * pdfW) / viewport.width;
+            const canvas = document.createElement("canvas");
+            canvas.width = viewport.width;
+            canvas.height = viewport.height;
+            const ctx = canvas.getContext("2d");
 
-                newPdf.addImage(imgData, "JPEG", 0, 0, pdfW, pdfH);
-            }
+            await page.render({ canvasContext: ctx, viewport }).promise;
 
-            statusText.innerText = "Finalizing Optimization...";
-            progressBar.style.width = "100%";
-            
-            finalBlob = newPdf.output("blob");
-            showResult(finalBlob);
+            const imgData = canvas.toDataURL("image/jpeg", 0.45);
 
-        } catch (err) {
-            console.error(err);
-            alert("Error: PDF is encrypted or corrupted.");
-            location.reload();
+            if (i > 1) newPdf.addPage();
+            const pdfW = newPdf.internal.pageSize.getWidth();
+            const pdfH = (viewport.height * pdfW) / viewport.width;
+
+            newPdf.addImage(imgData, "JPEG", 0, 0, pdfW, pdfH);
         }
+
+        finalBlob = newPdf.output("blob");
+        showResult(finalBlob);
     }
 
-    // --- Image Engine (High Quality Balanced) ---
     function processImage(file) {
-        statusText.innerText = "Analyzing Pixels...";
-        progressBar.style.width = "30%";
-        
+        progressBar.style.width = "20%";
+        statusText.textContent = "Processing image…";
+
         const reader = new FileReader();
         reader.onload = e => {
             const img = new Image();
             img.onload = () => {
-                const canvas = document.createElement("canvas");
-                const ctx = canvas.getContext("2d");
-
-                // QUALITY SETTING: Max width 1024px for sharpness
                 let width = img.width;
                 let height = img.height;
-                const maxWidth = 1024;
 
+                const maxWidth = 1024;
                 if (width > maxWidth) {
-                    height = Math.round(height * (maxWidth / width));
+                    height *= maxWidth / width;
                     width = maxWidth;
                 }
 
+                const canvas = document.createElement("canvas");
                 canvas.width = width;
                 canvas.height = height;
+                const ctx = canvas.getContext("2d");
 
-                // Better smoothing
                 ctx.imageSmoothingEnabled = true;
                 ctx.imageSmoothingQuality = "high";
                 ctx.drawImage(img, 0, 0, width, height);
 
-                statusText.innerText = "Compressing Texture...";
                 progressBar.style.width = "80%";
 
-                // COMPRESSION SETTING: 0.5 Quality (Balanced)
-                canvas.toBlob(
-                    blob => {
-                        progressBar.style.width = "100%";
-                        finalBlob = blob;
-                        showResult(blob);
-                    },
-                    "image/jpeg",
-                    0.5 
-                );
+                canvas.toBlob(blob => {
+                    finalBlob = blob;
+                    showResult(blob);
+                }, "image/jpeg", 0.5);
             };
             img.src = e.target.result;
         };
@@ -378,20 +309,17 @@
         setTimeout(() => {
             processingSection.classList.add("hidden");
             resultSection.classList.remove("hidden");
-            document.getElementById("finalSize").innerText = formatBytes(blob.size);
+            document.getElementById("finalSize").textContent = formatBytes(blob.size);
         }, 600);
     }
 
     function formatBytes(bytes) {
-        if (bytes === 0) return "0 Bytes";
-        const k = 1024;
         const sizes = ["Bytes", "KB", "MB"];
-        const i = Math.floor(Math.log(bytes) / Math.log(k));
-        return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + " " + sizes[i];
+        if (bytes === 0) return "0 Bytes";
+        const i = Math.floor(Math.log(bytes) / Math.log(1024));
+        return (bytes / Math.pow(1024, i)).toFixed(2) + " " + sizes[i];
     }
 </script>
 
 </body>
 </html>
-
-
