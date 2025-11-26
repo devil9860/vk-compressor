@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://devil9594.github.io/vk-compressor/sitemap.xml
